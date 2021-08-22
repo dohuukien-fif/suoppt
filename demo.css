@@ -1,0 +1,831 @@
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  line-height: 1rem;
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease;
+  list-style: none;
+}
+html {
+  font-size: 50%;
+}
+body {
+  width: auto;
+}
+header {
+  position: flex;
+}
+.containet {
+  background-color: black;
+}
+.nav {
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav-link {
+  display: block;
+  position: absolute;
+  top: -500%;
+
+  left: 0;
+  right: 0;
+  transition: 1s ease;
+}
+.nav .logo {
+}
+.nav .logo img {
+  width: 30%;
+  left: 0;
+  height: 5rem;
+  margin-left: 2.5rem;
+}
+.mm {
+  background-color: black;
+  left: 0;
+  right: 0;
+
+  position: fixed;
+}
+.nav-link ul {
+  background-color: black;
+  right: 0;
+  margin-top: -60px;
+  left: 0;
+}
+.nav-link.active {
+  top: 100%;
+}
+.nav-link ul li {
+  color: red;
+  margin-top: 7rem;
+  margin-left: 50%;
+}
+.nav-link ul li:last-child {
+  margin-bottom: 5rem;
+}
+
+.nav-link {
+  display: block;
+}
+.icon-navs {
+  color: white;
+  font-size: 3rem;
+  position: absolute;
+  right: 2.5rem;
+  top: 3rem;
+  transition: 0.8s ease;
+}
+.nav-links {
+  display: none;
+}
+/*side*/
+#side-container {
+  width: 100%;
+  z-index: -100;
+  position: relative;
+  overflow: hidden;
+}
+#side-container img {
+  width: 100%;
+  height: 30rem;
+}
+.sideImages {
+  position: relative;
+}
+#sideLeft {
+  position: absolute;
+  left: 10%;
+  top: 25%;
+  font-size: 5rem;
+}
+#sideRight {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  font-size: 5rem;
+}
+main {
+  max-width: 100%;
+  margin: auto;
+}
+.main-container {
+}
+.main-container__fulter {
+  height: 6rem;
+  background-color: black;
+  display: grid;
+  grid-template-columns: auto auto;
+
+  width: auto;
+  position: relative;
+
+  overflow: hidden;
+}
+.piza {
+  margin: auto;
+  display: flex;
+  margin-top: 0.5rem;
+}
+.piza__img img {
+}
+.piza__buy {
+  color: white;
+  display: grid;
+  grid-column: auto;
+  line-height: 6rem;
+  margin-left: 1rem;
+  font-size: 10px;
+}
+.piza__buy span:first-child {
+  margin-top: 1rem;
+}
+/*CONTENT*/
+.content__container {
+  width: 100%;
+  margin-top: 2rem;
+}
+.content__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.border-title1 {
+  width: 40%;
+  height: 2px;
+  background-color: black;
+}
+.border-title2 {
+  width: 40%;
+  height: 2px;
+  background-color: black;
+}
+.content__tab {
+  width: 100%;
+  margin-bottom: 10rem;
+  margin-top: 2rem;
+}
+.content__tabLinks {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 3rem;
+  margin: auto;
+  position: absolute;
+  grid-gap: 10px;
+  left: 13%;
+  font-family: Sriracha;
+}
+.link {
+  margin-top: 2.2rem;
+  width: 9rem;
+  font-size: 2.4rem;
+  color: #ff9c00;
+}
+.link.active {
+  color: #c00a27;
+  transform: translateY(20px);
+  position: relative;
+}
+.link.active::before {
+  content: "";
+  padding: 7px;
+  top: -25px;
+  left: 30%;
+  border: 0.5px solid gray;
+  border-radius: 50%;
+
+  box-shadow: red 1.95px 1.95px 2.6px;
+  position: absolute;
+  animation: anime 3s linear infinite;
+}
+@keyframes anime {
+  0% {
+    background: gray;
+    box-shadow: red 1.95px 1.95px 2.6px;
+  }
+  25% {
+    background: blue;
+    box-shadow: blue 0px 1px 4px;
+  }
+  50% {
+    background: gray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  75% {
+    background: green;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  100% {
+    background: black;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+}
+.content__main {
+  margin-top: 18rem;
+  display: grid;
+  grid-template-columns: auto;
+}
+.main__item {
+  margin: auto;
+  margin-bottom: 120px;
+  position: relative;
+
+  width: 90%;
+}
+.main__item:hover {
+  border: 0.5px solid gray;
+}
+.main__item--img {
+  overflow: hidden;
+}
+.main__item--img img {
+  transition: 0.4s ease;
+  width: 100%;
+  cursor: pointer;
+}
+.main__item--img img:hover {
+  transform: scale(1.2);
+}
+.max {
+  margin: auto;
+  position: absolute;
+  left: 35%;
+  margin-top: 1rem;
+}
+.main__name span {
+  font-size: 2rem;
+}
+.main__item .price {
+  color: #c00a27 !important;
+  margin: 1.5rem;
+  font-size: 1.7rem;
+}
+.main__item button {
+  padding: 1.2rem;
+  border-radius: 10rem;
+  color: white;
+  background-color: rgb(218, 216, 216);
+  border: none;
+  position: relative;
+  left: 15%;
+  cursor: pointer;
+}
+.main__item button::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+
+  left: 3rem;
+
+  right: 0;
+  z-index: 100;
+}
+.main__item button:hover:before {
+  left: -3rem;
+}
+.main__item button:hover {
+  background-color: green;
+}
+.coms {
+  width: 184px;
+  height: 190px;
+}
+/*foter*/
+.foter__container {
+  background: transparent
+    url(https://www.pizzaexpress.vn/wp-content/uploads/2018/06/combo_bg.jpg)
+    center center;
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.foter__container::before {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+
+.foter-ts {
+  margin: auto;
+  position: absolute;
+}
+.foter__title img {
+  background-color: rgb(124, 120, 120);
+}
+.foter__product {
+  margin-left: 15%;
+}
+.foter__combo {
+  margin: 3rem;
+  text-align: center;
+}
+.foter__combo span {
+  font-size: 3rem;
+  color: #ff9c00;
+  font-style: italic;
+  margin: 3rem;
+  text-align: center;
+}
+.content__titless {
+  font-size: 2.5rem;
+  color: white;
+}
+.foter__title {
+  margin: 3.5rem;
+}
+.fotet__image {
+  margin: auto;
+
+  left: 10%;
+}
+.fotet__images {
+  width: 80%;
+  margin-top: 13rem;
+}
+.res-image {
+  margin-top: 4rem;
+}
+.foter__product--cb {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -9rem;
+  margin-top: 2rem;
+}
+.foter__product--cb span {
+  font-size: 3.5rem;
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+}
+.foter__product--cb button {
+  padding: 1rem;
+  border-radius: 10rem;
+  color: white;
+  background-color: rgb(156, 16, 16);
+}
+.foter-border {
+  height: 0.5rem;
+  width: 80%;
+  margin: 2rem 0 2rem 0;
+  background-color: white;
+}
+.fotert__people {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -9rem;
+  margin-bottom: 2rem;
+}
+.foter__people-peoples {
+  font-size: 2.2rem;
+  color: white;
+}
+.folter__price {
+  color: #fff600;
+  font-size: 2.5rem;
+  font-size: 600;
+}
+.product__combo {
+  font-size: 1.8rem;
+  color: white;
+  width: 80%;
+  line-height: 25px;
+}
+/*people*/
+.folter__people {
+  height: auto;
+  width: auto;
+
+  background: transparent
+    url(https://www.pizzaexpress.vn/wp-admin/admin-ajax.php?action=kc_get_thumbn&type=filter_url&id=%2Fwp-content%2Fuploads%2F2018%2F06%2Fbg_nhanxet.jpg)
+    center center/cover no-repeat scroll;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+.folter__people--title {
+  text-align: center;
+
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-style: italic;
+  padding: 5rem 0 5rem 0;
+}
+.folter__information {
+}
+.folter__information1 {
+  width: 70%;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  position: relative;
+  font-style: italic;
+  display: block;
+  line-height: 1rem;
+  border-radius: 0.5rem;
+}
+.information2 {
+  margin-top: 3.5rem;
+}
+.folter__information--img {
+  left: 45%;
+
+  position: absolute;
+  top: -20%;
+}
+.folter__information--img img {
+  width: 3rem;
+  height: 3rem;
+}
+.folter__content p {
+  line-height: 1.3rem;
+}
+.folter__store {
+  background: transparent
+    url(https://www.pizzaexpress.vn/wp-admin/admin-ajax.php?action=kc_get_thumbn&type=filter_url&id=%2Fwp-content%2Fuploads%2F2018%2F05%2Ffooter_top_bg.png)
+    top center/cover no-repeat scroll;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+/*STORE*/
+.floter__store--fulter {
+  width: 80%;
+  margin: auto;
+}
+.store1__image {
+  text-align: center;
+}
+.store__title {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2.3rem;
+  color: #c00a27;
+  font-weight: 700;
+}
+.store__content p {
+  line-height: 2.5rem;
+  font-size: 1.8rem;
+  font-style: italic;
+  padding: 2rem;
+  font-weight: 400;
+}
+/*foucusEnd*/
+.focus__end {
+  background: transparent
+    url(https://www.pizzaexpress.vn/wp-admin/admin-ajax.php?action=kc_get_thumbn&type=filter_url&id=%2Fwp-content%2Fuploads%2F2018%2F05%2Ffooter_bg.jpg)
+    center center/cover no-repeat scroll;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.focus__end--fulter {
+  width: 80%;
+  margin: auto;
+}
+.foucus__end--image {
+  text-align: center;
+}
+.foucus__end--title {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #fff600;
+  padding: 2rem;
+}
+.foucus__end--adress1 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+.foucus__end--adress1 p {
+  line-height: 2rem;
+  font-weight: 400;
+}
+.foucus__seperate {
+  text-align: center;
+  padding: 2rem;
+}
+.addres2__img {
+  text-align: center;
+}
+.foucus__addres2--1 {
+  margin-top: 3rem;
+}
+.addres__content {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  color: white;
+}
+.addres__place {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.addres__place a {
+  color: #fff600;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .nav-link {
+    display: none;
+  }
+  .nav-links {
+    display: block;
+  }
+  .icon-navs {
+    display: none;
+  }
+  .nav-links ul {
+    display: flex;
+  }
+  .nav-links ul li {
+    color: red;
+    width: 10rem;
+  }
+  .main-container__fulter {
+    height: 6rem;
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1rem;
+    width: auto;
+    position: relative;
+  }
+  .content__tabLinks {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    margin-top: 2rem;
+    margin: auto;
+    position: absolute;
+    grid-gap: 10px;
+    font-style: italic;
+    font-weight: 600;
+    left: 20%;
+    font-family: Sriracha;
+  }
+  .content__main {
+    margin-top: 12rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .max {
+    margin: auto;
+    position: absolute;
+    left: 20%;
+    margin-top: 1rem;
+  }
+  .main__name span {
+    text-align: center;
+  }
+  .main__item .price {
+    text-align: center;
+    margin-left: -1.3rem;
+  }
+  .foter-ts {
+    margin: auto;
+    position: absolute;
+    left: 22%;
+  }
+  .product__combo {
+    font-size: 2.6rem;
+
+    color: rgb(216, 214, 214);
+    line-height: 25px;
+  }
+  .foter__people-peoples {
+    font-size: 2.5rem;
+    color: rgb(216, 214, 214);
+    font-family: "Montserrat", sans-serif;
+  }
+  .store__title {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.3rem;
+    color: #c00a27;
+    font-weight: 700;
+  }
+  .store__content p {
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    font-style: italic;
+    padding: 5rem;
+    font-weight: 400;
+    width: 82%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .nav-links ul {
+    display: flex;
+  }
+  .nav {
+    background-color: black;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links {
+    display: flex;
+    top: 270%;
+
+    top: 0;
+  }
+  .icon-navs {
+    display: none;
+  }
+  .nav-links {
+  }
+  .nav-links ul li {
+    color: red;
+    width: 100px;
+  }
+  .content__tabLinks {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    margin-top: 3rem;
+    margin: auto;
+    position: absolute;
+    grid-gap: 10px;
+    font-style: italic;
+    font-weight: 600;
+    left: 22%;
+    font-family: Sriracha;
+  }
+  .content__main {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    max-width: 83%;
+    margin: 12rem auto;
+  }
+  .max {
+    margin: auto;
+    position: absolute;
+    left: 20%;
+    margin-top: 1rem;
+  }
+  .main__item {
+    max-width: 250px;
+    height: auto;
+    border: 1px solid greenyellow;
+  }
+  .main__item .price {
+    color: #c00a27 !important;
+    margin: 1.5rem;
+    font-size: 1.7rem;
+    line-height: 13px;
+    text-align: center;
+    margin-left: -0.5rem;
+  }
+  .main__name {
+    left: 0;
+  }
+  .main__name span {
+    font-size: 1.5rem;
+
+    line-height: 25px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .foter__container--fulter {
+    display: grid;
+    width: 83%;
+    margin: auto;
+    grid-template-columns: auto auto auto;
+  }
+  .foter__product {
+    margin-left: 2rem;
+    max-width: 300px;
+  }
+  .foter__product img {
+    width: 230px;
+    height: 250px;
+  }
+
+  .res-image {
+    margin-top: 13rem;
+  }
+  .fotter_products {
+    width: 83%;
+    margin: auto;
+  }
+  .foter-ts {
+    margin: auto;
+    position: absolute;
+    left: 32%;
+  }
+  .fotert__people,
+  .product__combo {
+    font-size: 16px;
+  }
+  .produc2 {
+    margin-top: -8rem;
+    margin-left: 15%;
+  }
+  .foter__product--cb span {
+    font-size: 25px;
+    margin-left: 5rem;
+  }
+  .foter__people-peoples {
+    margin-left: 5rem;
+  }
+  .foter__people-peoples,
+  .folter__price {
+    font-size: 18px;
+  }
+  .res1 {
+    margin-left: 2rem;
+  }
+
+  .folter__information {
+    display: flex;
+    width: 8%3;
+    margin: auto;
+    flex-grow: 40% 40%;
+  }
+
+  .information2 {
+    margin-top: 0rem;
+  }
+  .folter__information1 {
+    width: 45%;
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+  }
+  .folter__content p {
+    line-height: 2.3rem;
+    padding: 2rem;
+  }
+  .folter__information--img {
+    left: 45%;
+
+    position: absolute;
+    top: -15%;
+  }
+  .folter__information--img img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .floter__store--fulter {
+    width: 83%;
+    display: flex;
+  }
+  .store__title {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    color: #c00a27;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+  .store__content p {
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+    font-style: italic;
+    padding: 1.8rem;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+  }
+  .foucus__addres2 {
+    display: flex;
+    flex: 33, 3%;
+  }
+
+  .foucus__addres2--1 {
+    margin-top: 3rem;
+    margin: auto;
+  }
+  .addres__content {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+
+    color: white;
+  }
+  .addres__content p {
+    line-height: 2.6rem;
+  }
+  .addres__place {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+}
